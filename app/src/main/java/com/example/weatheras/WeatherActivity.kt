@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val coordButton = findViewById<Button>(R.id.coordBtn)
-        coordButton.setOnClickListener {
+        val searchButton = findViewById<Button>(R.id.btn)
+        searchButton.setOnClickListener {
             val intent = Intent(this, CoordsActivity::class.java)
             startActivity(intent)
         }
