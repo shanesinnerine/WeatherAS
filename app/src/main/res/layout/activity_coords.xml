@@ -17,14 +17,14 @@
         android:textSize="50dp"
         android:paddingBottom="230dp"
         android:layout_gravity="center_horizontal"
-    />
+        />
 
     <EditText
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:hint="Enter location here"
+        android:hint="Enter Coords here"
         android:layout_gravity="center_horizontal"
         />
 

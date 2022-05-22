@@ -1,7 +1,7 @@
 package com.example.weatheras
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -15,6 +15,27 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        fun cityButtonClicked() {
+
+        }
+        findViewById<Button>(R.id.coordBtn).setOnClickListener {
+            findViewById<Button>(R.id.coordBtn).isSelected = !findViewById<Button>(R.id.coordBtn).isSelected
+            if (findViewById<Button>(R.id.cityBtn).isSelected) {
+                findViewById<Button>(R.id.cityBtn).isSelected = !findViewById<Button>(R.id.cityBtn).isSelected
+            }
+        }
+        findViewById<Button>(R.id.cityBtn).setOnClickListener {
+            findViewById<Button>(R.id.cityBtn).isSelected = !findViewById<Button>(R.id.cityBtn).isSelected
+            if (findViewById<Button>(R.id.coordBtn).isSelected) {
+                findViewById<Button>(R.id.coordBtn).isSelected = !findViewById<Button>(R.id.coordBtn).isSelected
+            }
+        }
+
+        val coordButton = findViewById<Button>(R.id.coordBtn)
+        coordButton.setOnClickListener {
+            val intent = Intent(this, CoordsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun onClick(view: View) {
