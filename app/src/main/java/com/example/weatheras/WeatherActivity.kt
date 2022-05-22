@@ -15,19 +15,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        fun cityButtonClicked() {
-
-        }
+        findViewById<Button>(R.id.cityBtn).isSelected = true
         findViewById<Button>(R.id.coordBtn).setOnClickListener {
-            findViewById<Button>(R.id.coordBtn).isSelected = !findViewById<Button>(R.id.coordBtn).isSelected
             if (findViewById<Button>(R.id.cityBtn).isSelected) {
                 findViewById<Button>(R.id.cityBtn).isSelected = !findViewById<Button>(R.id.cityBtn).isSelected
+                findViewById<Button>(R.id.coordBtn).isSelected = !findViewById<Button>(R.id.coordBtn).isSelected
             }
         }
         findViewById<Button>(R.id.cityBtn).setOnClickListener {
-            findViewById<Button>(R.id.cityBtn).isSelected = !findViewById<Button>(R.id.cityBtn).isSelected
             if (findViewById<Button>(R.id.coordBtn).isSelected) {
                 findViewById<Button>(R.id.coordBtn).isSelected = !findViewById<Button>(R.id.coordBtn).isSelected
+                findViewById<Button>(R.id.cityBtn).isSelected = !findViewById<Button>(R.id.cityBtn).isSelected
             }
         }
 
