@@ -48,7 +48,7 @@
             android:layout_height="50dp"
             android:id="@+id/cityBtn"
             android:text="City"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/button_background_color"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
         </Button>
@@ -57,7 +57,7 @@
             android:layout_height="50dp"
             android:id="@+id/coordBtn"
             android:text="Coords"
-            android:backgroundTint="@color/light_gray"
+            android:backgroundTint="@color/button_background_color"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
         </Button>
