@@ -42,34 +42,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        >
+        android:gravity="center_horizontal">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:id="@+id/cityBtn"
             android:text="City"
             android:backgroundTint="@color/green"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
         </Button>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/latBtn"
-            android:text="Lat"
+            android:id="@+id/coordBtn"
+            android:text="Coords"
             android:backgroundTint="@color/light_gray"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
-        </Button>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:id="@+id/lonBtn"
-            android:text="Lon"
-            android:backgroundTint="@color/light_gray"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
         </Button>
 
     </LinearLayout>
