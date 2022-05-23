@@ -34,7 +34,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/gray"
         android:text="Search"
-        android:onClick="onClick"
         android:backgroundTint="@color/black"
         android:layout_gravity="center_horizontal"
         />
