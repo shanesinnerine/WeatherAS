@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SearchActivity::class.java).apply {
                 putExtra("location", location)
             }
+            //For coords mode: pass latitude, longitude, putExtra("mode", "coords")
+            //For city: pass city name, putExtra("mode", "city")
             startActivity(intent)
         }
     }
