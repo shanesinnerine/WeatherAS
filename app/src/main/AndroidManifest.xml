@@ -15,6 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherAS"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@anim/slide_out_left" />
+
+        <activity
+            android:name=".CoordsActivity"
+            android:exported="false" />
         <activity
             android:name=".SearchActivity"
             android:exported="false" />
