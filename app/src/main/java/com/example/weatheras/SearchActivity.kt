@@ -15,12 +15,20 @@ class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
-
-        val location = intent.getStringExtra("location")
+        val mode = intent.getStringExtra("mode")
         var API_KEY = "f75aa22ec6b143fd9843e47520f4274c"
         val queue = Volley.newRequestQueue(this)
-        val url: String = "https://api.weatherbit.io/v2.0/current?city=$location&key=$API_KEY"
-        val stringReq: StringRequest = makeStringReq(url, "city", findViewById(R.id.currWeather))
+        val stringReq: StringRequest
+        if(mode == "city") {
+            val location = intent.getStringExtra("location")
+            val url: String = "https://api.weatherbit.io/v2.0/current?city=$location&key=$API_KEY"
+            stringReq = makeStringReq(url, "city", findViewById(R.id.currWeather))
+        } else {
+            val latitude = intent.getStringExtra("latitude")
+            val longitude = intent.getStringExtra("longitude")
+            val url: String = "https://api.weatherbit.io/v2.0/current?lat=$latitude&lon=$longitude&key=$API_KEY"
+            stringReq = makeStringReq(url, "coords", findViewById(R.id.currWeather))
+        }
         queue.add(stringReq)
         val backButton = findViewById<Button>(R.id.backBtn)
         backButton.setOnClickListener {
@@ -33,15 +41,13 @@ class SearchActivity : AppCompatActivity() {
         val stringReq = StringRequest(
             Request.Method.GET, url,
             { response ->
-                if (arguments == "city") {
-                    val obj = JSONObject(response)
-                    val arr = obj.getJSONArray("data")
-                    val obj2 = arr.getJSONObject(0)
-                    txt.text =
-                        obj2.getString("temp") + " deg Celsius in " + obj2.getString("city_name")
-                } else {
-                    txt.text = "Not Found"
+                if(arguments != "coords" && arguments != "city") {
+                    txt.text = "Not found"
                 }
+                val obj = JSONObject(response)
+                val arr = obj.getJSONArray("data")
+                val obj2 = arr.getJSONObject(0)
+                txt.text = obj2.getString("temp") + " deg Celsius in " + obj2.getString("city_name")
             }, { txt.text = "That didn't work" })
         return stringReq
     }
