@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WeatherAS</string>
+    <string name="header">WeatherAS</string>
+    <string name="enter_longitude_here">Enter longitude here</string>
+    <string name="enter_latitude_here">Enter latitude here</string>
+    <string name="search">Search</string>
+    <string name="city">City</string>
+    <string name="coords">Coords</string>
 </resources>

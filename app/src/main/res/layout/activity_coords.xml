@@ -4,18 +4,20 @@
     tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="50dp"
+    android:paddingTop="50sp"
     android:id="@+id/lLayout"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:orientation="vertical">
+    android:paddingLeft="16sp"
+    android:paddingRight="16sp"
+    android:orientation="vertical"
+    android:background="@color/light_blue">
     <TextView
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WeatherAS"
-        android:textSize="50dp"
-        android:paddingBottom="230dp"
+        android:text="@string/header"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:paddingBottom="190sp"
         android:layout_gravity="center_horizontal"
         />
 
@@ -23,8 +25,11 @@
         android:id="@+id/longitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:hint="Enter longitude here"
+        android:minWidth="300sp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:hint="@string/enter_longitude_here"
         android:layout_gravity="center_horizontal"
         />
 
@@ -32,8 +37,12 @@
         android:id="@+id/latitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:hint="Enter latitude here"
+        android:minWidth="300sp"
+        android:textSize="30sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:hint="@string/enter_latitude_here"
         android:layout_gravity="center_horizontal"
         />
 
@@ -41,33 +50,38 @@
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
         android:textColor="@color/gray"
-        android:text="Search"
-        android:backgroundTint="@color/black"
+        android:text="@string/search"
+        android:backgroundTint="@color/white"
         android:layout_gravity="center_horizontal"
         />
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="horizontal"
+        android:layout_marginTop="80sp"
         android:gravity="center_horizontal">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="50sp"
             android:id="@+id/cityBtn"
-            android:text="City"
+            android:text="@string/city"
+            android:textColor="@color/gray"
             android:backgroundTint="@color/button_background_color"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
         </Button>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="50sp"
             android:id="@+id/coordBtn"
-            android:text="Coords"
+            android:textColor="@color/gray"
+            android:text="@string/coords"
             android:backgroundTint="@color/button_background_color"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
         </Button>
 
     </LinearLayout>
